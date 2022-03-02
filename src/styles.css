@@ -1,0 +1,54 @@
+h2 {
+  margin-top: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 15px 60px;
+}
+
+.city {
+  margin: 50px 0 0;
+}
+
+.current-location {
+  background: #eef5ff;
+  color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 5px 10px;
+}
+
+.day-time {
+  color: #636262;
+}
+
+.current-temp {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-top: 20px;
+}
+
+.f-unit,
+.c-unit {
+  color: #0d6efd;
+  text-decoration: none;
+}
+.units :hover {
+  color: #0b5ed7;
+  text-decoration: underline #0b5ed7;
+}
+
+.weather-phw {
+  margin: 20px 0;
+}
+
+.weather-symbol {
+  font-size: 24px;
+  text-align: center;
+}
+
+.day {
+  font-weight: bold;
+}
