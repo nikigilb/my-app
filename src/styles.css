@@ -5,7 +5,8 @@ h2 {
 .container {
   margin: 0 auto;
   max-width: 800px;
-  padding: 15px 60px;
+  padding: 5px 60px;
+  border: solid;
 }
 
 .city {
