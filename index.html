@@ -16,84 +16,88 @@
   </head>
   <body>
     <div class="container">
-      <form class="row g-3 city" id="search-form">
-        <div class="col-auto">
-          <input
-            type="text"
-            class="form-control"
-            id="input-city"
-            placeholder="Type a City"
-          />
-        </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3" id="search-button">
-            Search
-          </button>
-          <button class="current-location" id="location-button">
-            Current Location
-          </button>
-        </div>
-      </form>
+      <div class="weather-app">
+        <form class="row g-3 city" id="search-form">
+          <div class="col-auto">
+            <input
+              type="text"
+              class="form-control"
+              id="input-city"
+              placeholder="Type a City"
+            />
+          </div>
+          <div class="col-auto">
+            <button
+              type="submit"
+              class="btn btn-primary mb-3"
+              id="search-button"
+            >
+              Search
+            </button>
+            <button class="current-location" id="location-button">
+              Current Location
+            </button>
+          </div>
+        </form>
 
-      <div class="row">
-        <div class="col">
-          <span class="current-temp" id="current-temp"> 18°F </span>
-          <span class="units">
-            <!--| (for switching between fahrenheit and celsius)
-            <a href="#" class="c-unit" id="c-unit">°C</a>
-            
-            <a href="#" class="f-unit" id="f-unit">°F</a>
-            -->
-          </span>
-          <h5><strong>H: 26°</strong> L: -1°</h5>
-        </div>
-
-        <div class="col">
-          <h2 id="city">Indianapolis, IN</h2>
-          <div class="day-time"></div>
-        </div>
-      </div>
-
-      <div class="weather-phw">
-        <div>Precipitation: 80%</div>
-        <div>Humidity: 99%</div>
-        <div>Wind: 16mph</div>
-      </div>
-      <div class="row">
-        <div class="col weather-symbol">
-          <div class="day">Sun</div>
-          ⛅️
-          <div class="temperature"><strong>32°</strong>/19°</div>
+        <div class="row">
+          <div class="col-6">
+            <span class="current-temp" id="current-temp"> 18</span>
+            <span class="units">
+              <a href="#" class="c-unit active" id="c-unit">°C</a>
+              |
+              <a href="#" class="f-unit" id="f-unit">°F</a>
+            </span>
+            <h5><strong>H: 26°</strong> L: -1°</h5>
+          </div>
+          <div class="col-6">
+            <h2 id="city">Indianapolis, IN</h2>
+            <div class="day-time"></div>
+          </div>
         </div>
 
-        <div class="col weather-symbol">
-          <div class="day">Mon</div>
-          ⛅️
-          <div class="temperature"><strong>39°</strong>/31°</div>
+        <div class="weather-phw">
+          <div>Precipitation: 80%</div>
+          <div>Humidity: 99%</div>
+          <div>Wind: 16mph</div>
         </div>
+        <div class="row">
+          <div class="col weather-symbol">
+            <div class="day">Sun</div>
+            ⛅️
+            <div class="temperature"><strong>32°</strong>/19°</div>
+          </div>
 
-        <div class="col weather-symbol">
-          <div class="day">Tue</div>
-          🌧
-          <div class="temperature"><strong>48°</strong>/33°</div>
-        </div>
+          <div class="col weather-symbol">
+            <div class="day">Mon</div>
+            ⛅️
+            <div class="temperature"><strong>39°</strong>/31°</div>
+          </div>
 
-        <div class="col weather-symbol">
-          <div class="day">Wed</div>
-          🌨
-          <div class="temperature"><strong>36°</strong>/22°</div>
-        </div>
+          <div class="col weather-symbol">
+            <div class="day">Tue</div>
+            🌧
+            <div class="temperature"><strong>48°</strong>/33°</div>
+          </div>
 
-        <div class="col weather-symbol">
-          <div class="day">Thurs</div>
-          ❄️
-          <div class="temperature"><strong>24°</strong>/2°</div>
+          <div class="col weather-symbol">
+            <div class="day">Wed</div>
+            🌨
+            <div class="temperature"><strong>36°</strong>/22°</div>
+          </div>
+
+          <div class="col weather-symbol">
+            <div class="day">Thurs</div>
+            ❄️
+            <div class="temperature"><strong>24°</strong>/2°</div>
+          </div>
         </div>
       </div>
       <a href="https://github.com/nikigilb/weather-app"
         >Open-source code by Nikita Gilbert</a
       >
     </div>
+
     <script src="src/index.js"></script>
   </body>
 </html>

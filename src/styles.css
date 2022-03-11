@@ -6,6 +6,9 @@ h2 {
   margin: 0 auto;
   max-width: 800px;
   padding: 5px 60px;
+}
+
+.weather-app {
   border: solid #b8b4b4;
 }
 
@@ -28,7 +31,11 @@ h2 {
   font-size: 50px;
   font-weight: 600;
   line-height: 50px;
-  margin-top: 20px;
+}
+
+.units {
+  position: relative;
+  top: -25px;
 }
 
 .f-unit,
@@ -36,11 +43,15 @@ h2 {
   color: #0d6efd;
   text-decoration: none;
 }
-.units :hover {
-  color: #0b5ed7;
-  text-decoration: underline #0b5ed7;
+
+.units .active {
+  cursor: default;
+  color: black;
 }
 
+.units .active :hover {
+  text-decoration: none;
+}
 .weather-phw {
   margin: 20px 0;
 }
