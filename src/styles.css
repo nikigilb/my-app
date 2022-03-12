@@ -52,8 +52,8 @@ h2 {
 .units .active :hover {
   text-decoration: none;
 }
-.weather-phw {
-  margin: 20px 0;
+.weather-dhw {
+  margin-bottom: 20px;
 }
 
 .weather-symbol {

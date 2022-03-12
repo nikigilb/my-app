@@ -32,10 +32,16 @@ function citySearch(event) {
 function getTemperature(response) {
   let temperature = document.querySelector("#current-temp");
   let cityDisplayed = document.querySelector("#city");
+  let weatherDescription = document.querySelector("#weather-description");
+  let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind-speed");
 
   celsiusTemperature = response.data.main.temp;
   temperature.innerHTML = Math.round(celsiusTemperature);
   cityDisplayed.innerHTML = response.data.name;
+  weatherDescription.innerHTML = response.data.weather[0].description;
+  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  windSpeed.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
 }
 
 function showLocation(position) {
