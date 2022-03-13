@@ -9,18 +9,36 @@ h2 {
 }
 
 .weather-app {
-  border: solid #b8b4b4;
+  border: 1px solid rgb(58, 45, 128, 0.5);
 }
 
-.city {
+.input-city {
   margin: 10px;
 }
 
+.search-button {
+  background: #6957e7;
+  color: #fff;
+  border: #6957e7;
+}
+
+.search-button:hover {
+  background: #6957e7;
+  color: #fff;
+  border: #6957e7;
+}
+
 .current-location {
-  background: #eef5ff;
-  color: #0d6efd;
-  border-color: #0d6efd;
+  background: #a763f6;
+  color: #fff;
+  border-color: #a763f6;
   padding: 5px 10px;
+}
+
+.current-location:hover {
+  background: #a763f6;
+  color: #fff;
+  border-color: #a763f6;
 }
 
 .day-time {
@@ -31,6 +49,7 @@ h2 {
   font-size: 50px;
   font-weight: 600;
   line-height: 50px;
+  color: rgb(48, 48, 48);
 }
 
 .units {
@@ -40,8 +59,14 @@ h2 {
 
 .f-unit,
 .c-unit {
-  color: #0d6efd;
+  color: #a763f6;
   text-decoration: none;
+}
+
+.f-unit:hover,
+.c-unit:hover {
+  text-decoration: underline;
+  color: #a763f6;
 }
 
 .units .active {
@@ -49,11 +74,17 @@ h2 {
   color: black;
 }
 
-.units .active :hover {
+.units .active:hover {
   text-decoration: none;
+}
+
+.city-element {
+  color: rgb(48, 48, 48, 0.9);
 }
 .weather-dhw {
   margin-bottom: 20px;
+  margin-left: 10px;
+  color: rgb(48, 48, 48, 0.8);
 }
 
 .weather-symbol {
@@ -63,4 +94,8 @@ h2 {
 
 .day {
   font-weight: bold;
+}
+
+.code-link {
+  color: rgb(167, 99, 246);
 }

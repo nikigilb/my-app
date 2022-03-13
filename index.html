@@ -17,7 +17,7 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <form class="row g-3 city" id="search-form">
+        <form class="row g-3 input-city" id="search-form">
           <div class="col-auto">
             <input
               type="text"
@@ -29,7 +29,7 @@
           <div class="col-auto">
             <button
               type="submit"
-              class="btn btn-primary mb-3"
+              class="btn btn-primary mb-3 search-button"
               id="search-button"
             >
               Search
@@ -58,7 +58,7 @@
             </span>
           </div>
           <div class="col-6">
-            <h2 id="city">Indianapolis</h2>
+            <h2 class="city-element" id="city">Indianapolis</h2>
             <div class="day-time"></div>
           </div>
         </div>
@@ -100,9 +100,14 @@
           </div>
         </div>
       </div>
-      <a href="https://github.com/nikigilb/weather-app" target="_blank"
-        >Open-source code by Nikita Gilbert</a
-      >
+      <small>
+        <a
+          href="https://github.com/nikigilb/weather-app"
+          class="code-link"
+          target="_blank"
+          >Open-source code by Nikita Gilbert</a
+        >
+      </small>
     </div>
 
     <script src="src/index.js"></script>
