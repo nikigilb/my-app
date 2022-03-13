@@ -45,6 +45,12 @@ h2 {
   color: #636262;
 }
 
+.weather-icon {
+  height: 90px;
+  position: relative;
+  top: -14px;
+}
+
 .current-temp {
   font-size: 50px;
   font-weight: 600;
