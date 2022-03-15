@@ -55,7 +55,7 @@ h2 {
   font-size: 50px;
   font-weight: 600;
   line-height: 50px;
-  color: rgb(48, 48, 48);
+  color: rgb(48, 48, 48, 0.9);
 }
 
 .units {
@@ -93,13 +93,21 @@ h2 {
   color: rgb(48, 48, 48, 0.8);
 }
 
-.weather-symbol {
+.weather-forecast {
   font-size: 24px;
   text-align: center;
 }
 
 .day {
   font-weight: bold;
+}
+
+.forecast-max-temperature {
+  font-weight: bold;
+}
+
+.forecast-min-temperature {
+  opacity: 0.6;
 }
 
 .code-link {
