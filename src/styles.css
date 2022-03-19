@@ -100,14 +100,17 @@ h2 {
 
 .day {
   font-weight: bold;
+  font-size: 16px;
 }
 
 .forecast-max-temperature {
   font-weight: bold;
+  font-size: 16px;
 }
 
 .forecast-min-temperature {
   opacity: 0.6;
+  font-size: 16px;
 }
 
 .code-link {
