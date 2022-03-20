@@ -17,17 +17,6 @@ let dayTime = document.querySelector(".day-time");
 dayTime.innerHTML = `${day} ${hours}:${minutes}`;
 
 let apiKey = "e2f36d818d6c24ee59a8141538e2d51f";
-let search = document.querySelector("#search-button");
-search.addEventListener("click", citySearch);
-
-function citySearch(event) {
-  event.preventDefault();
-  let citySelected = document.querySelector("#input-city");
-  let cityDisplayed = document.querySelector("#city");
-  cityDisplayed.innerHTML = citySelected.value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySelected.value}&appid=${apiKey}&units=imperial`;
-  axios.get(`${apiUrl}`).then(getTemperature);
-}
 
 function getForecast(coordinates) {
   let apiKey = "e2f36d818d6c24ee59a8141538e2d51f";
@@ -118,3 +107,19 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+function search(city) {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(`${apiUrl}`).then(getTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let citySelected = document.querySelector("#city-input");
+  search(citySelected.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("New York");
