@@ -63,24 +63,8 @@ h2 {
   top: -25px;
 }
 
-.f-unit,
-.c-unit {
+.f-unit {
   color: #a763f6;
-  text-decoration: none;
-}
-
-.f-unit:hover,
-.c-unit:hover {
-  text-decoration: underline;
-  color: #a763f6;
-}
-
-.units .active {
-  cursor: default;
-  color: black;
-}
-
-.units .active:hover {
   text-decoration: none;
 }
 

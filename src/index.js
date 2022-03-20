@@ -25,13 +25,13 @@ function citySearch(event) {
   let citySelected = document.querySelector("#input-city");
   let cityDisplayed = document.querySelector("#city");
   cityDisplayed.innerHTML = citySelected.value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySelected.value}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySelected.value}&appid=${apiKey}&units=imperial`;
   axios.get(`${apiUrl}`).then(getTemperature);
 }
 
 function getForecast(coordinates) {
   let apiKey = "e2f36d818d6c24ee59a8141538e2d51f";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=imperial&appid=${apiKey}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -49,7 +49,7 @@ function getTemperature(response) {
   cityDisplayed.innerHTML = response.data.name;
   weatherDescription.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  windSpeed.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
+  windSpeed.innerHTML = `Wind: ${response.data.wind.speed} m/h`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -62,7 +62,7 @@ function getTemperature(response) {
 function showLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let urlCoords = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  let urlCoords = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
   axios.get(urlCoords).then(getTemperature);
 }
 
@@ -73,30 +73,6 @@ function getCurrentPosition(event) {
 
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", getCurrentPosition);
-
-function displayFahrenheit(event) {
-  event.preventDefault();
-  let tempUnit = document.querySelector("#current-temp");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  tempUnit.innerHTML = Math.round(fahrenheitTemperature);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-let fahrenheitLink = document.querySelector("#f-unit");
-fahrenheitLink.addEventListener("click", displayFahrenheit);
-
-function displayCelsius(event) {
-  event.preventDefault();
-  let tempUnit = document.querySelector("#current-temp");
-  tempUnit.innerHTML = Math.round(celsiusTemperature);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
-
-let celsiusTemperature = null;
-let celsiusLink = document.querySelector("#c-unit");
-celsiusLink.addEventListener("click", displayCelsius);
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
