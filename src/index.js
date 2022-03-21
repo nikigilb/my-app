@@ -19,7 +19,6 @@ dayTime.innerHTML = `${day} ${hours}:${minutes}`;
 let apiKey = "e2f36d818d6c24ee59a8141538e2d51f";
 
 function getForecast(coordinates) {
-  let apiKey = "e2f36d818d6c24ee59a8141538e2d51f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=imperial&appid=${apiKey}`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -38,7 +37,7 @@ function getTemperature(response) {
   cityDisplayed.innerHTML = response.data.name;
   weatherDescription.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  windSpeed.innerHTML = `Wind: ${response.data.wind.speed} m/h`;
+  windSpeed.innerHTML = `Wind: ${response.data.wind.speed} mph`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
